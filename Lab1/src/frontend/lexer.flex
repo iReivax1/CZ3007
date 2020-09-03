@@ -29,32 +29,79 @@ import static frontend.Token.Type.*;
 	/* Use this method for rules where you need to process yytext() to get the lexeme of the token.
 	 *
 	 * Useful for string literals; e.g., the quotes around the literal are part of yytext(),
-	 *       but they should not be part of the lexeme. 
+	 *       but they should not be part of the lexeme.
+	 *  text.length counts from 1, so need to minus 1. 
 	*/
 	private Token token(Token.Type type, String text) {
+		if(type == Token.Type.STRING_LITERAL){
+			text = text.substring(1, text.length()-1);
+		}
 		
+		return new Token(type, yyline, yycolumn, text);
 	}
 %}
 
 /* This definition may come in handy. If you wish, you can add more definitions here. */
 WhiteSpace = [ ] | \t | \f | \n | \r
-
-
+Digits = [0-9]
+Identifier = [a-zA-Z][a-zA-Z0-9_]
 %%
 /* put in your rules here.    */
-/* 14 keywords */
-"boolean" Return ((BOOLEAN))
-"break"
-"else"
-"false"
-"if"
-"import"
-"int"
-"module"
-"public"
-"return"
-"true"
-"type"
+/* return token(MODULE) */
+/* fourteen keywords */
+
+"boolean" { return token(BOOLEAN); }
+"break"   { return token(BREAK); }
+"else"    { return token(ELSE); }
+"false"   { return token(FALSE); }
+"if"      { return token(IF); }
+"import"  { return token(IMPORT); }
+"int"     { return token(INT); }
+"module"  { return token(MODULE); }
+"public"  { return token(PUBLIC); }
+"return"  { return token(RETURN); }
+"true"    { return token(TRUE); } 
+"type"    { return token(TYPE); }
+"void"    { return token(VOID); }
+"while"   { return token(WHILE); }
+
+/* eight punctuation */ 
+
+","  { return(token(COMMA)) };
+"["  { return(token(LBRACKET)) };
+"{"  { return(token(LCURLY)) };
+"("  { return(token(LPAREN)) };
+"]"  { return(token(RBRACKET)) };
+"}"  { return(token(RCURLY)) };
+")"  { return(token(RPAREN)) };
+";"  { return(token(SEMICOLON)) };
+
+/* eleven operators */
+
+"/"  { return token(DIV); }
+"==" { return token(EQEQ); }
+"="  { return token(EQL); }
+">=" { return token(GEQ); }
+">"  { return token(GT); }
+"<=" { return token(LEQ); }
+"<"  { return token(LT); }
+"-"  { return token(MINUS); }
+"!=" { return token(NEQ); }
+"+"  { return token(PLUS); }
+"*"  { return token(TIMES); }
+
+/*Identifiers*/
+{Identifier}*   {return token(ID, yytext());}
+
+/*Literals*/
+
+
+/*INT*/
+
+
+/*STRING*/
+
+
 
 
 /* You don't need to change anything below this line. */
