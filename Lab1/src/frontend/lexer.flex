@@ -94,13 +94,14 @@ Identifier = [a-zA-Z][a-zA-Z0-9_]
 {Identifier}*   {return token(ID, yytext());}
 
 /*Literals*/
-
-
 /*INT*/
-
+{Digits}+  {return token(INT_LITERAL, yytext()); }
 
 /*STRING*/
+\"([^\n\"])*\" {return token(STRING_LITERAL, yytext()); }
 
+/*white space*/
+{WhiteSpace}+					{} 
 
 
 
