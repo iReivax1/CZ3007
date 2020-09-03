@@ -67,7 +67,7 @@ Digits = [0-9]
 
 /* eight punctuation */ 
 
-","								{ return token(COMMA)); }
+","								{ return token(COMMA); }
 "["								{ return token(LBRACKET); }
 "{"								{ return token(LCURLY); }
 "("								{ return token(LPAREN); }
@@ -91,14 +91,14 @@ Digits = [0-9]
 "*"								{ return token(TIMES); }
 
 /*Identifiers*/
-[a-zA-Z][a-zA-Z0-9_]*					{return token(ID, yytext());}
+[a-zA-Z][a-zA-Z0-9_]*			{return token(ID, yytext());}
 
 /*Literals*/
 /*INT*/
 {Digits}+						{return token(INT_LITERAL, yytext()); }
 
 /*STRING*/
-\"([^\n\"])*\"				    {return token(STRING_LITERAL, yytext()); }
+\"([^\n\"])*\"					{return token(STRING_LITERAL, yytext());}
 
 /*skip white space*/
 {WhiteSpace}+					{} 

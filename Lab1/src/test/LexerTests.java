@@ -55,6 +55,7 @@ public class LexerTests {
 				new Token(EOF, 0, 25, ""));
 	}
 
+	
 	@Test
 	public void testStringLiteralWithDoubleQuote() {
 		runtest("\"\"\"",
