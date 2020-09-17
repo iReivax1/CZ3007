@@ -47,22 +47,17 @@ public class LexerTests {
 	public void testKWs() {
 		// first argument to runtest is the string to lex; the remaining arguments
 		// are the expected tokens
-		runtest("module false return while",
+		runtest("module false return while }",
 				new Token(MODULE, 0, 0, "module"),
 				new Token(FALSE, 0, 7, "false"),
 				new Token(RETURN, 0, 13, "return"),
 				new Token(WHILE, 0, 20, "while"),
-				new Token(EOF, 0, 25, ""));
+				new Token(RCURLY, 0, 26, "}"),
+				new Token(EOF, 0, 27, "")			
+				);
 	}
-
 	
-	@Test
-	public void testStringLiteralWithDoubleQuote() {
-		runtest("\"\"\"",
-				new Token(STRING_LITERAL, 0, 0, ""),
-				(Token)null,
-				new Token(EOF, 0, 3, ""));
-	}
+
 
 	@Test
 	public void testStringLiteral() {

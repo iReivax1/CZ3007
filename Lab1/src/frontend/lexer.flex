@@ -77,7 +77,6 @@ Digits = [0-9]
 ";"								{ return token(SEMICOLON); }
 
 /* eleven operators */
-
 "/"								{ return token(DIV); }
 "=="							{ return token(EQEQ); }
 "="								{ return token(EQL); }
