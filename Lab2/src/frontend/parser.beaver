@@ -23,7 +23,7 @@
 %goal Module;
 
 // temporary declaration, you can remove this once you have written all other rules
-%goal Dummy;
+
 
 /* TODO: Flesh out the rule for Module, and add rules for other nonterminals. Here is an example
          of a rule you may want to add:
@@ -32,11 +32,149 @@
 		  |
 		  ;
   */
+/* Right recursion and common prefix is fine*/
 
-Module = ;
+Module = MODULE ID LCURLY Imports Declarations RCURLY;
 
+/* zero or more import statements*/
+Imports = Import Imports 
+		|
+		;
+Import = IMPORT ID SEMICOLON;
+/*zero or more declarations*/
+Declarations = Declaration Declarations 
+		|
+		;
+		
+Declaration = Function
+		| Field 
+		| Type
+		;
+
+Function = Accessibility TypeName ID LPAREN ParameterList RPAREN LCURLY Statements RCURLY;
+
+Field = Accessibility TypeName ID SEMICOLON;
+
+Type = Accessibility TYPE ID EQL STRING_LITERAL SEMICOLON;
+
+Accessibility = PUBLIC
+		|
+		;
+		
+TypeName = PrimitiveType
+		| ArrayType
+		| ID
+		;
+
+PrimitiveType = VOID
+		| BOOLEAN
+		| INT
+		;
+
+ArrayType = PrimitiveType LBRACKET RBRACKET
+		| ArrayType LBRACKET RBRACKET
+		| ID LBRACKET RBRACKET
+		;
+
+ParameterList = Parameters
+		|
+		;
+		
+Parameters = Parameter ParameterTail;
+ParameterTail = COMMA Parameter ParameterTail
+		|
+		;
+Parameter = TypeName ID;
+
+Statements = Statement Statements
+		| 
+		;
+
+Statement = TypeName ID SEMICOLON
+		| LCURLY Statements RCURLY
+		| IF LPAREN Expression RPAREN Statement
+		| IF LPAREN Expression RPAREN Statement ELSE Statement
+		| WHILE LPAREN Expression RPAREN Statement
+		| BREAK SEMICOLON
+		| RETURN SEMICOLON
+		| RETURN Expression SEMICOLON
+		| Expression SEMICOLON
+		;
+ 
+Expression = Assignment 
+		| RHSExpression
+		;
+
+Assignment = LHSExpression EQL Expression;
+
+LHSExpression = ID 
+		| IndexExpr
+		;
+		
+IndexExpr = ID LBRACKET Expression RBRACKET
+		| IndexExpr LBRACKET Expression RBRACKET
+		;
+		
+ArrayAccess = LHSExpression LBRACKET Expression RBRACKET;
+
+RHSExpression = ArithmeticExpression
+		| ArithmeticExpression ComparisonOperator ArithmeticExpression
+		;
+
+ComparisonOperator = EQEQ
+		| NEQ
+		| LT
+		| LEQ 
+		| GT
+		| GEQ
+		;
+		
+ArithmeticExpression = ArithmeticExpression AdditiveOperator Term
+		| Term
+		;
+		
+AdditiveOperator = PLUS
+		| MINUS
+		;
+
+Term = Term TIMES Factor
+		| Term DIV Factor
+		| Term MOD Factor
+		| Factor
+		;
+
+Factor = MINUS Factor
+		| PrimaryExpression
+		;
+
+PrimaryExpression = LHSExpression
+		| ID LPAREN ExpressionList RPAREN
+		| LBRACKET ArrayExpression RBRACKET
+		| STRING_LITERAL
+		| INT_LITERAL
+		| Boolean
+		| LPAREN Expression RPAREN
+		;
+
+ExpressionList = Expressions
+		|
+		;
+
+Expressions = Expressions COMMA Expression
+		| Expression
+		;
+
+ArrayExpression = Expression ArrayExpressionTail;
+
+ArrayExpressionTail = COMMA Expression ArrayExpressionTail
+		|
+		;
+
+Boolean = TRUE 
+		| FALSE
+		;
 /**/
 
-/* Dummy rule to make the lexer compile. Remove this once you have written all other rules. */	  
+/* Dummy rule to make the lexer compile. Remove this once you have written all other rules.   
 Dummy = MODULE INT VOID IF ELSE WHILE RETURN BREAK BOOLEAN PUBLIC TRUE FALSE INT_LITERAL STRING_LITERAL ID TYPE IMPORT
-           PLUS MINUS TIMES DIV MOD EQEQ NEQ LEQ GEQ LT GT LBRACKET RPAREN COMMA RCURLY LCURLY SEMICOLON RBRACKET LPAREN EQL;
+           PLUS MINUS TIMES DIV MOD EQEQ NEQ LEQ GEQ LT GT LBRACKET RPAREN COMMA RCURLY LCURLY SEMICOLON RBRACKET LPAREN EQL; */
