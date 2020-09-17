@@ -51,31 +51,31 @@ public class Parser extends beaver.Parser {
 	}
 
 	static final ParsingTables PARSING_TABLES = new ParsingTables(
-		"U9orLcbKLLKK$kvz8E8BmG058Z1JK45GWGSXo2XIY1GDDefafPKb3PQDMZPQ$EXdmrgjrkg" +
-		"FFqsphAHir6Pjij9iCANIKYir6dRVkU#y##wxxpx05RstlhFtjwTpxhdtx7i1imChq89vgC" +
-		"8vE1SNuYBKORvyW#jn0sx4ITA774p0P1H6nTqlQmSN1ryu3cRCk96u4alikBYOSPKu7HVRS" +
-		"Qi76PTWnqr78yx6J9o7PfJX3ap5D6HOSuz6Mh$UCVrwi$lnZkl7DxuVtoINRwxbYxIDzR3b" +
-		"MxOvBckHHsIfXwtUmzRaOJlBmtP#p7grhljJuuWfnnItNqGsHDd#n7LHTGRYDmqK8RzW9UO" +
-		"Z6SiSQpeDDsCvRi6jk0st7$USGysJ48yKF81XgC1md4W#0dwSW4HUtN3SXO3cYzHJ8uTm5I" +
-		"v5AaO5EPOYdNmPEcGzzKuvY6kG6JmPiW#TE5EV4dNrCzJLSqUwv5lSRLcghVrGsXcsTecbB" +
-		"KKMJkOOd7KzQrqkUtIjOFKzhFqWShdoot0AJaKU2Z0HnMGLAC4iD60sMj4cpw5TdiK5M22z" +
-		"M2XxSOLyZyMu6jVoVg$2dRWN3m6u1$TnV1ZXtseOx2W#Tejuxaq2zq8njHD9x2V9r4Pnjr9" +
-		"vhjrn6PnzS7668oudPbpmgG$59SUCos8lohRZnWmoBho#F9xjYUmBaxcJXJmrHTpDuDmbFC" +
-		"l$btSeVOErDVwdxA6skUzFP4nAb1yyaMwRtyCs48yRP8R14#rSqrYUjt4ySUFvrZlUEOUQ1" +
-		"zXDVUmibJprLUnP0VQGMdvdL3AcYdlNe7dmgL7PPNpcostk9yyaLxjNR$aDVJ8IoTEr7hvw" +
-		"5U5dPmfRl3I3C$iv1cSPmLfbHB1Mg7gwNdawzLngAPGfP1LytvlCKV#P6edMlrh3q5urIpm" +
-		"C4MQaS2H2Fvv#e7jbi9Db4bE9AgAPY2CM0yOSoWpA5XKN0lb1OXMnZJX2V4Ziigh2sAThfW" +
-		"AcGTv7ELBRygcd1NMpYBvvb0KaCoX7KxPfNmbz7PJ590krBL$FNQBvfCWrcNdqBT8nIuWku" +
-		"ajYEGqpAH$HlaSZy$YKm7YA#QMw3jTYhA4iq$vsyhKwju7sWDRtKw#Wt4YPHLGww#gOpRHN" +
-		"kMnRzJpPHBNMkJupXwWbSea9H3tHedDwgJTe$HZrHfsNICnoppiGc5EdQr4OhThMHjGGhKI" +
-		"J8tQsbjm7ipbavwtUuRYcnuWd7Fpfw3cHvl1lSDZR7NgdHrwNYw$JSeMMtGxV9YqVT#LiST" +
-		"Tr#BRhDJr9y1aqVPGBj6stbhqUUJjTV6yaDmve#vgmpVHf6y#F6HzZFNtHDkEmbZsHTjElx" +
-		"OUe9yMwng46vuiRm7$KuxgweN$ojnos94VvGux9KRX#SiJMlhR6tJR$YjXbivq4pxXyGNmk" +
-		"dycdqaFj4s4$aW#8BSJhn2loilJ8nrRETld8ajlaBOwlMVfBZhatouloWcoqzETbdJn3#Qh" +
-		"5DhbM#Pqr$cIDFrhZ3$Ap793zygQy8U$BU$Akl2DlorPwTgZPvNSxzpVvbVlmZwN$nM4klm" +
-		"Y7iT#RXEg7FhwVJ4BrPCD63NjxBRjp7MC3v06elctOcER0TDO8ePoydB7rh5bDNaszZ7gf1" +
-		"V1RoQSHJoHeQMhuB3c5DHIAoFCe5VAv5WNrXL9CUmEb5mhfAwIiq2WW3yFWEz4a3BuP5U88" +
-		"dzP3yF6Bp2HKB$UfVcwzGnMQ$WNyiZ9n");
+		"U9pDLlbNLLKK$kvz304A639gva1WWg0eCm4I8PQbeEQC8cgccJQeJQP9sIZbBwtLwWzezKj" +
+		"cLZPgPMKsMMPQLbesQ8DPLbPcxhvxxdcFotttmQDLBkzTtzbxVtkVVOPxpm2OAx0Cbs0oAZ" +
+		"0Hap0Dqp4AJV85Ri2Dk0bzv0JwuJmCGMvGtBtoM7XnyBN7mGmP5uybk3OG5n4ohWnZC2CGr" +
+		"nPcN7GWhW2rc81AN8vw568nXc4uqbJRAUZTgJUrKs$VJhm3E$5bTk8xt#MRgtmTkSiKLzrn" +
+		"zF8qcaKmonNRNyMETR7P7bdpFBYH7boD1rVdmJLuS5Cyk9QGRRX6Y2f7J3661it0NrWHLAS" +
+		"hUtvN4N8Koz641Cnpj5#AAx00Ls8X5k6gRhTvkksUI4Gaed0Vpi9y#HbB4Oiuz23VYZiGWn" +
+		"Bojwc$p#Rj5JGFHRW5PwDLVi9rI48lpiJjk5aE8HbhTOmr8#LgHYpjWe1sSK2RgRHMEOWCk" +
+		"mtPA1kHBflbAvrZ5RLpC9xlkHY0ERWLwp28VSsYDXWvoCS8zl0YN8ZHk1JZP1CQvGbCnMnS" +
+		"ZMjmlHp6Ila6g#LhhE7tlnDtutxS0#0kFC2o3GPt81zt5si6eZbIox977y#l6eTU76CIzm5" +
+		"tN1hR2o$ESCJr2nbd$#N#k8IGSHdSk$e6ubB3Z6llNnPNzs3k8qCuTxbS9NcSGRlj4LpF$v" +
+		"Vtl$HvSUxHn$1$0FyAhzYwiBEUIPnxX1rZ4eFySLojRguhEoBC6WRIExJVdojp85Tb9a$Kx" +
+		"hPvkkr2MiNSCKfv7x37MycTg9gymLaiuQvMfly#cxTNK3hFd7B#LOQgaS0xaILhoSHnTx9Z" +
+		"scUaSytQ3n9r6x7gAyNmjNEKgup9V7tKB5dCVQ#KLZBjHBufxA6fwiLoHxKHetonIglGC5J" +
+		"cI6jKFFTJL9dADR5#DTIJJWmZAeXw8e9OG1mXqW2ZsOhp0p3fDnuYZbDF8NeISSA7CbddJA" +
+		"AUJrGJEPhBfbwfSunX$SMKjJJAAGiensdVUFgMKOwbqQAvEbiQ4xGzsjMd6lfMwfWrn5hY1" +
+		"D56efBo4UtRqB4U$mGOcrc$GUUPGdihPQFsDzBUhklk9Ezllv2OH6ulPH4nsPbNnnyWFzN5" +
+		"7T9v3z8tJUSg9N$KNJyK63zHvpf5VRhc#3tD6Pf$a6ZngDT4b16pYHAYYfX3BDB#FeH$lgr" +
+		"lCvDOI3GxSipISWanry$pq#znZ76R1OUzCxWlwEtmxtFmZGwzsQFUKfUzGyjLMgvp#7Ph#R" +
+		"2hpdvtNeVliExJBiBwheCebsjEzDWZFEeTSzadEzfcZEOtERW1Ec#KrOvtVup4OCwCrxaUT" +
+		"SLcX1hNlm7pPNhpPgwMFOYyxkSrquCvh8T#v6yvfYHB#LF#aD$XUkHuGFjSbGS2zdxYiu3r" +
+		"AV49iO$uMFRA7jb2xKDvZoNNihn1l4gy95jbY#nMTNR91qg#BzjPRbFw2uwsNvRdvJbvLkd" +
+		"FoEEoWV8LPRseogVaINbTNfDtvHrvMzwIDsK7sO#KxtjLVcUr9D$AZt94Vd2Dx4jL$XQmVv" +
+		"LVE1#db7wIHGDlcb4y1qm2wYmeeSwrp9FA2A2IUtuLT$5gnbfd6VSgxkz60CCTA60EFwoJR" +
+		"1HZQvcpWhPr7fHJ7wa0ti5y6f54j9QcXa$9eSnX8Ozs5gM5RFR5WdLpoITVG#c5NFfoAOiq" +
+		"ScYtm#2PQH86JquB4OHFwtxuUCyp2F3EvoCCtl1Cdei#0kgyjL3$3$ZfESy=");
 
 	static final Action RETURN6 = new Action() {
 		public Symbol reduce(Symbol[] _symbols, int offset) {
@@ -204,18 +204,29 @@ public class Parser extends beaver.Parser {
 			RETURN2,	// [63] Factor = MINUS Factor; returns 'Factor' although none is marked
 			Action.RETURN,	// [64] Factor = PrimaryExpression
 			Action.RETURN,	// [65] PrimaryExpression = LHSExpression
-			RETURN4,	// [66] PrimaryExpression = ID LPAREN ParameterList RPAREN; returns 'RPAREN' although none is marked
+			RETURN4,	// [66] PrimaryExpression = ID LPAREN ExpressionList RPAREN; returns 'RPAREN' although none is marked
 			RETURN3,	// [67] PrimaryExpression = LBRACKET ArrayExpression RBRACKET; returns 'RBRACKET' although none is marked
 			Action.RETURN,	// [68] PrimaryExpression = STRING_LITERAL
 			Action.RETURN,	// [69] PrimaryExpression = INT_LITERAL
 			Action.RETURN,	// [70] PrimaryExpression = Boolean
 			RETURN3,	// [71] PrimaryExpression = LPAREN Expression RPAREN; returns 'RPAREN' although none is marked
-			RETURN2,	// [72] ArrayExpression = Expression ArrayExpressionTail; returns 'ArrayExpressionTail' although none is marked
-			Action.NONE,  	// [73] ArrayExpression = 
-			RETURN3,	// [74] ArrayExpressionTail = COMMA Expression ArrayExpressionTail; returns 'ArrayExpressionTail' although none is marked
-			Action.NONE,  	// [75] ArrayExpressionTail = 
-			Action.RETURN,	// [76] Boolean = TRUE
-			Action.RETURN	// [77] Boolean = FALSE
+			Action.RETURN,	// [72] ExpressionList = Expressions
+			Action.NONE,  	// [73] ExpressionList = 
+			new Action() {	// [74] Expressions = Expressions COMMA Expression
+				public Symbol reduce(Symbol[] _symbols, int offset) {
+					((ArrayList) _symbols[offset + 1].value).add(_symbols[offset + 3]); return _symbols[offset + 1];
+				}
+			},
+			new Action() {	// [75] Expressions = Expression
+				public Symbol reduce(Symbol[] _symbols, int offset) {
+					ArrayList lst = new ArrayList(); lst.add(_symbols[offset + 1]); return new Symbol(lst);
+				}
+			},
+			RETURN2,	// [76] ArrayExpression = Expression ArrayExpressionTail; returns 'ArrayExpressionTail' although none is marked
+			RETURN3,	// [77] ArrayExpressionTail = COMMA Expression ArrayExpressionTail; returns 'ArrayExpressionTail' although none is marked
+			Action.NONE,  	// [78] ArrayExpressionTail = 
+			Action.RETURN,	// [79] Boolean = TRUE
+			Action.RETURN	// [80] Boolean = FALSE
 		};
 	}
 

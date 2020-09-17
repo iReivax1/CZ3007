@@ -148,7 +148,7 @@ Factor = MINUS Factor
 		;
 
 PrimaryExpression = LHSExpression
-		| ID LPAREN ParameterList RPAREN
+		| ID LPAREN ExpressionList RPAREN
 		| LBRACKET ArrayExpression RBRACKET
 		| STRING_LITERAL
 		| INT_LITERAL
@@ -156,10 +156,15 @@ PrimaryExpression = LHSExpression
 		| LPAREN Expression RPAREN
 		;
 
-
-ArrayExpression = Expression ArrayExpressionTail
-		| 
+ExpressionList = Expressions
+		|
 		;
+
+Expressions = Expressions COMMA Expression
+		| Expression
+		;
+
+ArrayExpression = Expression ArrayExpressionTail;
 
 ArrayExpressionTail = COMMA Expression ArrayExpressionTail
 		|
