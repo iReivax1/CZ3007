@@ -1,1 +1,4 @@
 /parser/
+/frontend/
+/lexer/
+/test/

@@ -37,4 +37,50 @@ public class ParserTests {
 	public void testEmptyModule() {
 		runtest("module Test { }");
 	}
+	
+	@Test
+	public void testModuleImport() {
+		runtest("module Test { import beaver;}");
+	}
+
+	
+	@Test
+	public void testArrayParam() {
+		runtest("module Test { "
+				+ "public void main(void vv, ss vv, int[][] arr) {"
+				+ "}"
+				+ "}");
+	}
+	
+	
+	@Test
+	public void testArithmetic() {
+		runtest("module Test { "
+				+ "public void main(void vv, ss vv) {"
+				+ "yy = x + gg(ii) - 5 * v(a[2]) / g(9) * m(\"222\");"
+				+ "}"
+				+ "}");
+	}
+	
+	@Test
+	public void testAll() {
+		runtest("module Test { "
+				+ "public void main(void[][][] vv, boolean[] bb, int[] ii, int i2) {"
+				+ "if(x==2) print(ii);"
+				+ "else print(i2);"
+				+ "yy = x + gg(ii) - 5 * v(a[a]) / g(9) * m(\"222\");"
+				+ "while (x<99) break;"
+				+ "while (x<=99) break;"
+				+ "while (x>=99) break;"
+				+ "while (x<99) break;"
+				+ "while (x>99) break;"
+				+ "while (x!=99) break;"
+				+ "return random + v>=9 + v/99;"
+				+ "}"
+				+ "}");
+	}
+	
+	
+	
+	
 }
