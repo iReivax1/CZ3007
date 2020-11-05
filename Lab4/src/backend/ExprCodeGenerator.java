@@ -98,14 +98,14 @@ public class ExprCodeGenerator extends Visitor<Value> {
 	@Override
 	public Value visitIntLiteral(IntLiteral nd) {
 		/* TODO: return something meaningful here */
-		return IntConstant.v(nd.getValue());
+		return IntConstant.v(nd.getValue().intValue());
 	}
 	
 	/** Generate code for a string literal. */
 	@Override
 	public Value visitStringLiteral(StringLiteral nd) {
 		/* TODO: return something meaningful here */
-		return StringConstant.v(nd.getValue());
+		return StringConstant.v(nd.getValue().toString());
 	}
 	
 	/** Generate code for a Boolean literal. */
