@@ -111,10 +111,9 @@ public class StmtCodeGenerator extends Visitor<Void> {
 		// evaluate condition
 		Value cond = ExprCodeGenerator.generate(nd.getExpr(), fcg);
 		units.add(j.newIfStmt(j.newEqExpr(cond, IntConstant.v(0)), label1));	// if false goto label1
-		nd.getBody().accept(this);
-		
 		// add label1 to break-targets
 		breakTargets.put(nd, label1);
+		nd.getBody().accept(this);
 		
 		units.add(j.newGotoStmt(label0));
 		units.add(label1);
