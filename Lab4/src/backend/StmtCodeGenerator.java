@@ -8,6 +8,7 @@ import soot.jimple.IntConstant;
 import soot.jimple.Jimple;
 import soot.jimple.NopStmt;
 import soot.util.Chain;
+import ast.ASTNode;
 import ast.Block;
 import ast.BreakStmt;
 import ast.ExprStmt;
@@ -51,6 +52,10 @@ public class StmtCodeGenerator extends Visitor<Void> {
 	public Void visitBreakStmt(BreakStmt nd) {
 		/* TODO: generate code for break statement (hint: use ASTNode.getEnclosingLoop and breakTargets;
 		 *       use units.add() to insert the statement into the surrounding method) */
+		
+		WhileStmt wn = nd.getEnclosingLoop();
+		Unit target = breakTargets.get(wn);
+		units.add(j.newGotoStmt(target));
 		return null;
 	}
 
@@ -98,6 +103,22 @@ public class StmtCodeGenerator extends Visitor<Void> {
 		/* TODO: generate code for while statement as discussed in lecture; add the NOP statement you
 		 *       generate as the break target to the breakTargets map
 		 */
+		
+		NopStmt label0 = j.newNopStmt();	// true target
+		NopStmt label1 = j.newNopStmt(); 	// false target
+		units.add(label0);
+		
+		// evaluate condition
+		Value cond = ExprCodeGenerator.generate(nd.getExpr(), fcg);
+		units.add(j.newIfStmt(j.newEqExpr(cond, IntConstant.v(0)), label1));	// if false goto label1
+		nd.getBody().accept(this);
+		
+		// add label1 to break-targets
+		breakTargets.put(nd, label1);
+		
+		units.add(j.newGotoStmt(label0));
+		units.add(label1);
+		
 		return null;
 	}
 }
